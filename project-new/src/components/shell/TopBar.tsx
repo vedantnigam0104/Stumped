@@ -1,4 +1,4 @@
-import { Moon, Settings, Sun, Zap } from 'lucide-react';
+import { Moon, Sun, Zap } from 'lucide-react';
 import { navLinks } from '@/lib/routes';
 import type { RouteId } from '@/lib/routes';
 import type { Theme } from '@/hooks/useTheme';
@@ -11,7 +11,6 @@ type TopBarProps = {
   theme: Theme;
   onToggleTheme: () => void;
   onSelectPlayer: (id: string) => void;
-  onOpenSettings: () => void;
 };
 
 export default function TopBar({
@@ -20,7 +19,6 @@ export default function TopBar({
   theme,
   onToggleTheme,
   onSelectPlayer,
-  onOpenSettings,
 }: TopBarProps) {
   const isDark = theme === 'dark';
 
@@ -61,9 +59,6 @@ export default function TopBar({
 
         <div className="ml-auto flex items-center gap-1 sm:gap-2">
           <SearchPanel onSelectPlayer={onSelectPlayer} />
-          <IconButton label="Cricket data settings" onClick={onOpenSettings}>
-            <Settings size={18} />
-          </IconButton>
           <IconButton label={isDark ? 'Switch to light mode' : 'Switch to dark mode'} onClick={onToggleTheme}>
             {isDark ? <Sun size={18} /> : <Moon size={18} />}
           </IconButton>
