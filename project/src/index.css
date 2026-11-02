@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root,
+  .dark {
+    --bg: 11 14 20;
+    --surface: 21 26 35;
+    --elevated: 28 35 48;
+    --line: 35 42 56;
+    --ink: 242 244 248;
+    --muted: 138 147 166;
+    --accent: 198 242 78;
+    --accent-text: 198 242 78;
+    --on-accent: 11 14 20;
+    --violet: 139 124 246;
+    --success: 52 211 153;
+    --warning: 245 185 74;
+    --danger: 248 113 113;
+    color-scheme: dark;
+  }
+
+  .light {
+    --bg: 244 245 248;
+    --surface: 255 255 255;
+    --elevated: 238 240 244;
+    --line: 221 225 232;
+    --ink: 14 17 22;
+    --muted: 91 100 117;
+    --accent: 198 242 78;
+    --accent-text: 56 102 0;
+    --on-accent: 11 14 20;
+    --violet: 102 86 230;
+    --success: 16 150 105;
+    --warning: 180 110 0;
+    --danger: 200 60 60;
+    color-scheme: light;
+  }
+
+  html {
+    @apply bg-bg text-ink antialiased;
+  }
+
+  body {
+    @apply font-sans leading-normal;
+    font-variant-numeric: tabular-nums;
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: 2px;
+  }
+}
