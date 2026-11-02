@@ -6,7 +6,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Client-Info, Apikey",
 };
 
-const PROVIDER_BASE = "https://api.cricapi.com/v1?apikey='728106a7-cad9-422f-966a-f57948940080'";
+const PROVIDER_BASE = "https://api.cricapi.com/v1";
 const NEWS_FEED = "https://feeds.bbci.co.uk/sport/cricket/rss.xml";
 const ID_PATTERN = /^[A-Za-z0-9-]{1,80}$/;
 
